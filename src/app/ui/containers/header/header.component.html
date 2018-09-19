@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand navbar-dark bg-dark fixed-top">
+  <a routerLink="/" class="navbar-brand">
+      <img [attr.src]="logo" [attr.alt]="title" width="30" height="30">
+      {{title}}
+  </a>
+  <div class="navbar-collpase">
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" *ngFor="let link of links"
+        [routerLink]="link.url" routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }">
+        {{ link.label }}
+        </a>
+    </div>
+</div>
+  </nav>
+
+
